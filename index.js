@@ -1,67 +1,37 @@
 import React ,{Component}from 'react';
-import { StyleSheet, Text,Alert, View,TouchableHighlight,Button ,TextInput} from 'react-native';
-import {
-  StackNavigator,
-} from 'react-navigation';
+import { StyleSheet, View, Text, Image, TouchableHighlight } from 'react-native';
 
-      export default class App extends Component {
-  state = {
-    inputValue: ""
-  };
-  state =
-  { secureTextEntry: ""};
-
-  _handlePress = () => {
-    this.props.navigation.navigate('Ds');
+ export default class App extends Component {
+    _handlePress= () => {
+    this.props.navigation.navigate('Logup');
   };
 
-  _handleTextChange = inputValue => {
-    this.setState({ inputValue});
-  };
-  
-  _handleSecureTextChange = secureTextEntry => {
-    this.setState({ secureTextEntry });
-  };
+   
 
+   render() {
+     return (
+ <View  style={styles.container}>
 
-  render() {
-    return (
-      <View style={styles.container}>
-      
-       <Text style={{fontSize: 32, fontWeight: 'bold', color: 'green', margin:40}}>Weight Wonder</Text>
-        <TextInput
-          value={this.state.inputValue}
-          placeholder="Username"
-          onChangeText={this._handleTextChange}
-          style={{ width: 200, height: 44, margin: 10  ,borderWidth:1, color:'green' , borderColor:'green'}}
-        />
+ <Text style={{fontSize: 24
+ , fontWeight: 'bold', color: 'green', margin: 40}}>Weight Loss Plan</Text>
+ 
 
-        <TextInput
-         secureTextEntry={true}
-          value={this.state.secureTextEntry}
-          placeholder="Password"
-          onChangeText={this._handleSecureTextChange}
-          style={{ width: 200, height: 44, margin: 10, borderColor:'green',borderWidth: 1,color:'green' }}
-        />
+       <Image
+         source={{ uri: 'https://conceptdraw.com/a3182c3/p19/preview/640/pict--double-arc-arrow-sales-arrows-vector-stencils-library'}}
+         style={{ height: 100, width: 100, alignItmens: 'center', justifyContent: 'center', margin:20}}
+       />
+       <Text style={{fontSize: 18, color: 'green', margin: 40}}>Know about Weight Loss Program and join it.
+ </Text>
+     
 
-
-      <TouchableHighlight style={styles.button} underlayColor="#4FB2B5" 
-      onPress={this._handlePress}><Text style={{color:'white', fontSize:18}}>Sign In</Text>
-      </TouchableHighlight>    
-      
-       <TouchableHighlight
-      onPress={this._handleButtonPress}><Text style={{color: 'green', fontSize: 14 }}>Don't have an account?</Text>
-      </TouchableHighlight> 
-       <TouchableHighlight  
-      onPress={this._handleButtonPress}><Text style={{color: 'green', fontSize: 18}}>Sign Up</Text>
-      </TouchableHighlight> 
-      </View>
-    
-    );
-  }
-}
-
-    
+ <TouchableHighlight style={styles.button} 
+      onPress={this._handlePress}><Text style={{color: '#ffffff', fontSize: 18}}>Continue</Text>
+      </TouchableHighlight>
+     
+ </View>
+         );
+ }
+ }
 
 const styles = StyleSheet.create({
   container: {
@@ -70,7 +40,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
+  
   button: {
     height: 40,
     backgroundColor: '#4FB2B5',

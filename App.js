@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
 import { StackNavigator } from 'react-navigation';
-import LoginScreen from './App/Components/Login';
+import LogupScreen from './App/Components/Logup';
 import SigninScreen from './App/Components/Signin';
 import DsScreen from './App/Components/Ds';
-
+import BookScreen from './App/Components/Book'
 export default StackNavigator({
-  Login: {screen: LoginScreen},
+  Logup: {screen: LogupScreen},
 },
 {
 Signin: {screen: SigninScreen},
 },
 {
 	Ds: {screen: DsScreen},
+},
+{
+	Book: { screen: BookScreen},
 },
 );
